@@ -1,7 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 
+import List from './components/list';
+
 function App() {
+  const items = [
+    { id: 1, title: 'Bake some cookies' },
+    { id: 2, title: 'Pick up the garbage' },
+    { id: 3, title: 'Clean the table' },
+    { id: 4, title: 'Finish your homework' },
+  ];
+
   return (
     <div className="App">
       <header className="App-header">
@@ -9,14 +18,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
+        <List items={items} />
       </header>
     </div>
   );
